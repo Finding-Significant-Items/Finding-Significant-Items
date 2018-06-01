@@ -26,7 +26,7 @@ string Read()
     return tmp;
 }
 int cmp(node i,node j) {return i.y>j.y;}
-int main(int argv, char **argc)
+int main()
 {
     int MEM,K;
     cin>>MEM>>K;

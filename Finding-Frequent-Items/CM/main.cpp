@@ -24,7 +24,7 @@ string Read()
 }
 string s[10000005];
 int cmp(node i,node j) {return i.y>j.y;}
-int main(int argv, char **argc)
+int main()
 {
 
     int MEM,K;
