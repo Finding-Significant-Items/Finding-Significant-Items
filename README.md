@@ -6,11 +6,11 @@ Finding top-k frequent items has been a hot issue in data bases. Finding top-k p
 
 ## About the source codes and datasets.
 
-There are three documents. The name of the document means the application of the algorithms in the document.
+There are three documents. The name of the document means the application of the algorithms in the paper.
 
-For each document, there are several files in it. All mentioned algorithms in Paper are provided.
+For each document, there are several files in it. All mentioned algorithms in the Paper are provided.
 
-The file "LTC" denotes our algorithm.
+The file of LTC.cpp denotes our algorithm, we will detail it below.
 
 We use 3 real datasets and synthetic datasets in our experiments.
 
@@ -24,13 +24,33 @@ Synthetic: We generated 5 different datasets according to Zipfian distribution b
 
 ## How to run
 
-Suppose you've already cloned the repository and start from the Codes directory.
+Suppose you've already cloned the repository and installed g++.
 
-You can use g++ to complile this code (e.g., g++ xxx.cpp -o xxx.exe).
+Open the terminate and compile the code (e.g., g++ LTC.cpp -o LTC.exe), you will soon get the executable file.
 
-You will be asked to input some parameters (e.g., memory size, standard of 'top'), please read files to detail it.
+Double-click that executable file, you will be asked to input some parameters (e.g. the number of memory size, k, coefficents and so forth). More details are presented in the file of LTC.cpp.
 
+Here we present a dataset, named stack-new.txt. It contains 10,000,000 flows, and each flow contains the item ID and the arriving time. We commend setting the number of periods to 1000, and the memory size to more than 20KB.
+
+However, since the maximal file size in the Github is 100MB, we have to compress this file. Users should decompress this file if they want to use this dataset.
 
 ## Output format
 
-We set some variables in each code. They will give you any information you want.
+We set some variables in the file of LTC.cpp.
+
+For example, the variable PRE donotes the precision.
+
+There are a lot of notes in the file, and they will give you every information you want.
+
+## Sample Input
+10000000
+1 1
+100
+30
+1000
+
+where 10000000 means the number of flows, 1 1 means the coefficents of alpha and beta, 100 means the value of k, 30 means the memory size, 1000 means the number of periods.
+
+## Sample Output
+precision: 0.79000
+ARE: 0.02704
